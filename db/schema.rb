@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20140504033648) do
 
   create_table "animals", force: true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "species"
     t.string   "breed"
     t.string   "image"
     t.string   "age"
