@@ -1,12 +1,11 @@
 PetHub::Application.routes.draw do
-   # match 'auth/:provider/callback', to: 'sessions#create'
-   # match 'auth/failure', to: redirect('/')
-   # match 'signout', to: 'sessions#destroy', as: 'signout'
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
-resources :users, :sessions, :pets, :welcome
+resources :users, :sessions, :animals, :welcome
 
 root 'welcome#index'
-
 #        Prefix Verb   URI Pattern                  Controller#Action
 #         users GET    /users(.:format)             users#index
 #               POST   /users(.:format)             users#create
@@ -24,14 +23,14 @@ root 'welcome#index'
 #               PATCH  /sessions/:id(.:format)      sessions#update
 #               PUT    /sessions/:id(.:format)      sessions#update
 #               DELETE /sessions/:id(.:format)      sessions#destroy
-#          pets GET    /pets(.:format)              pets#index
-#               POST   /pets(.:format)              pets#create
-#       new_pet GET    /pets/new(.:format)          pets#new
-#      edit_pet GET    /pets/:id/edit(.:format)     pets#edit
-#           pet GET    /pets/:id(.:format)          pets#show
-#               PATCH  /pets/:id(.:format)          pets#update
-#               PUT    /pets/:id(.:format)          pets#update
-#               DELETE /pets/:id(.:format)          pets#destroy
+#       animals GET    /animals(.:format)           animals#index
+#               POST   /animals(.:format)           animals#create
+#    new_animal GET    /animals/new(.:format)       animals#new
+#   edit_animal GET    /animals/:id/edit(.:format)  animals#edit
+#        animal GET    /animals/:id(.:format)       animals#show
+#               PATCH  /animals/:id(.:format)       animals#update
+#               PUT    /animals/:id(.:format)       animals#update
+#               DELETE /animals/:id(.:format)       animals#destroy
 # welcome_index GET    /welcome(.:format)           welcome#index
 #               POST   /welcome(.:format)           welcome#create
 #   new_welcome GET    /welcome/new(.:format)       welcome#new
@@ -40,6 +39,7 @@ root 'welcome#index'
 #               PATCH  /welcome/:id(.:format)       welcome#update
 #               PUT    /welcome/:id(.:format)       welcome#update
 #               DELETE /welcome/:id(.:format)       welcome#destroy
-#          root GET    /                            welcome/#index
+#          root GET    /                            welcome#index
+
 
 end
