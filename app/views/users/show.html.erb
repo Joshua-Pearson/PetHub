@@ -1,3 +1,12 @@
 <p><%= current_user.inspect %></p>
 
 <p><%= @user.inspect %> </p>
+
+<h1> Welcome back <%= @user.name %> </h1>
+
+  <ul>
+  <li><%= link_to "View your pets", animals_path %></li>
+  <li><%= link_to "Add a new pet", users_path %></li>
+  <li><%= link_to "Edit a current pet", users_path %></li>
+  <li><%= link_to "Delete a pet off of the site", users_path %></li>
+</ul>

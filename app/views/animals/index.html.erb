@@ -1,6 +1,6 @@
-<h1> <%= Date.today %>
+<h1> <%= Date.today %> </h1>
 
 <% @animals.each do |pet| %>
-    <p><%= pet.name %></p>
-    <img src="<%=pet.image%>"/>
+    <ul><a href='/animals/<%= pet.id %>'><%= pet.name %></a>
+    <img src="<%=pet.image%>"/></ul>
 <% end %>

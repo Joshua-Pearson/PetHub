@@ -1,5 +1,6 @@
 class Animal < ActiveRecord::Base
   belongs_to :user
+  has_many :messages
   validates :name, presence: true, length: {minimum: 2, maximum: 40}
   validates :species, presence: true, length: {minimum: 2, maximum: 40}
   validates :breed, presence: true, length: {minimum: 2, maximum: 40}
@@ -16,5 +17,9 @@ class Animal < ActiveRecord::Base
   end
 
   def self.animals_this_past_week
+  end
+
+  def self.owners_animals
+    Animal.findby()
   end
 end
