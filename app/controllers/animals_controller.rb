@@ -1,5 +1,6 @@
 class AnimalsController < ApplicationController
   before_filter :current_user, only: [:create, :new, :edit, :update, :destroy]
+  before_filter :check_animal_owner, only: [:edit, :update, :destroy]
 
   def index
     @animals = Animal.all
@@ -16,6 +17,10 @@ class AnimalsController < ApplicationController
   def create
     animal = Animal.create animal_params
     redirect_to(animal)
+  end
+
+  def edit
+    @animal = Animal.find(params[:id])
   end
 
 private

@@ -7,10 +7,10 @@ class Animal < ActiveRecord::Base
   validates :breed, presence: true, length: {minimum: 2, maximum: 40}
   validates :age, presence: true, length: {minimum: 2, maximum: 40}
 
+current_user.animals
 
-
-  def self.animals_today
-    Animal.where('created_at < ?', Date.today )
+  def self.animals_today(current_user)
+    current_user.animals.where('created_at < ?', Date.today )
   end
 
   def self.animals_yesterday

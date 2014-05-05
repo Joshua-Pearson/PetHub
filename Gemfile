@@ -8,6 +8,7 @@ gem 'pg'
 
 #using carrierwave for picture uploading
 gem 'carrierwave'
+gem 'rmagick'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

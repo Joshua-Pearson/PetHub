@@ -1,6 +1,9 @@
 <h1> <%= Date.today %> </h1>
 
 <% @animals.each do |pet| %>
-    <ul><a href='/animals/<%= pet.id %>'><%= pet.name %></a>
-    <img src="<%=pet.image%>"/></ul>
+  <ul>
+    <a href='/animals/<%= pet.id %>'><%= pet.name %></a>
+    <%= image_tag pet.image_url.to_s %>
+  </ul>
+ <% binding.pry %>
 <% end %>
