@@ -1,6 +1,7 @@
 class Animal < ActiveRecord::Base
   belongs_to :user
   has_many :messages
+  mount_uploader :image, ImageUploader
   validates :name, presence: true, length: {minimum: 2, maximum: 40}
   validates :species, presence: true, length: {minimum: 2, maximum: 40}
   validates :breed, presence: true, length: {minimum: 2, maximum: 40}

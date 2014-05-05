@@ -1,0 +1,18 @@
+<%= form_for @animal do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true %>
+  <br>
+  <%= f.label :species %>
+  <%= f.text_field :species %>
+  <br>
+  <%= f.label :breed %>
+  <%= f.text_field :breed %>
+  <br>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+  <br>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <br>
+  <%= f.submit  class: "btn btn-primary" %>
+<% end %>
