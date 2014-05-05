@@ -1,0 +1,6 @@
+<h1> <%= Date.today %>
+
+<% @animals.each do |pet| %>
+    <p><%= pet.name %></p>
+    <img src="<%=pet.image%>"/>
+<% end %>

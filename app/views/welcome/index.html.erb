@@ -1,1 +1,24 @@
 <h1 id="mainWelcome"> Welcome to PetHub </h1>
+
+<ul class="menu-left">
+  <li><%= link_to "Browse Pets Available", animals_path %></li>
+  <li><%= link_to "Browse People", users_path %></li>
+</ul>
+
+<ul class="menu-right">
+  <% if current_user %>
+  <li><%= link_to "My Profile", user_path(current_user) %></li>
+  <% end %>
+</ul>
+
+
+
+<div class="comments">
+  <div id="welcome-comments">
+    Show random user comments here
+  </div>
+</div>
+
+<div id="disclaimer">
+  Put disclaimer text here.
+</div>

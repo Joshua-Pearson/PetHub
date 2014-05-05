@@ -6,6 +6,9 @@ gem 'rails', '4.0.4'
 #Using postgres for database
 gem 'pg'
 
+#using carrierwave for picture uploading
+gem 'carrierwave'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -41,6 +44,10 @@ end
 gem 'bcrypt', '~> 3.1.7'
 gem 'omniauth'
 gem 'omniauth-facebook'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'

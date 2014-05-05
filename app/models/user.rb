@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
       user.oauth_token = auth.credentials.token
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.image = auth.info.image
-      user.location = auth.info.location
+      user.location = auth.info.user_location
       user.save!
     end
   end
