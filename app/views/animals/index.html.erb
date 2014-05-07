@@ -1,8 +1,28 @@
 <h1> <%= Date.today %> </h1>
 
-<% @animals.each do |pet| %>
-  <ul>
-    <a href='/animals/<%= pet.id %>'><%= pet.name %></a>
-    <%= image_tag pet.image.url %>
-  </ul>
-<% end %>
+<table>
+    <% @animals_today.in_groups_of(1) do |animal| %>
+    <tr>
+      <% animal.each do |animal| %>
+      <td><a href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
+      <td><a href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
+      <td><%= animal.created_at.strftime("%B %d at %I:%M %p") %></td>
+      <% end %>
+    </tr>
+    <% end %>
+</table>
+
+<h2> <%= Date.yesterday %> </h2>
+  <table>
+    <% @animals_yesterday.in_groups_of(1) do |animal| %>
+    <tr>
+      <% animal.each do |animal| %>
+      <td><a href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
+      <td><a href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
+      <td><%= animal.updated_at %></td>
+      <% end %>
+    </tr>
+    <% end %>
+</table>
+
+<%= @animals.inspect %>

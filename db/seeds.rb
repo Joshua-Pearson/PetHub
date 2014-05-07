@@ -1,5 +1,3 @@
-Animal.delete_all
-User.delete_all
 
 josh = User.create(:name => 'Joshua Pearson',  :email => "josh@111minnagallery.com", :provider => "facebook", :uid => "242508245942333", :oauth_token => "CAALQTlfmHLABAApbQoZBwa8zAmfyZCR0qo3jr0jmf5uiqDlhpKIeG693vPU2Imqf8Bh6rD21WgyR9mLCEvHAqAmGzNrw1Mo43cw5aBPBYxdMkUkyCabapmrYKzklWLHTyDn6V823WZBJsHDLHNSZAdiePwDZBNFA2Ox1zGLr7mjnsbZAIdeZBy8", :oauth_expires_at => "2014-07-04 15:37:22", :image => "http://graph.facebook.com/242508245942442/picture")
 steve = User.create(:name => 'Stephen Healy', :email => "someemail@email.com", :provider => "facebook", :uid => "242508245942221", :oauth_token => "CAALQTlfmHLABAApbQoZBwa8zAmfyZCR0qo3jr0jmf5uiqDlhpKIeG693vPU2Imqf8Bh6rD21WgyR9mLCEvHAqAmGzNrw1Mo43cw5aBPBYxdMkUkyCabapmrYKzklWLHTyDn6V823WZBJsHDLHNSZAdiePwDZBNFA2Ox1zGLr7mjnsbZAIdeZCv9", :oauth_expires_at => "2014-07-04 13:37:22", :image => "http://graph.facebook.com/242508245942442/picture")

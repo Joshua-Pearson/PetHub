@@ -1,10 +1,12 @@
-<p><%= current_user.inspect %></p>
+<br><br><br><br><h2> Welcome <%= current_user.name %></h2>
 
-<h1> Welcome back <%= @user.name %> </h1>
-
-  <ul>
-  <li><%= link_to "View your pets", animals_path %></li>
-  <li><%= link_to "Add a new pet", new_animal_path %></li>
-  <li><%= link_to "Edit a current pet", edit_animal_path %></li>
-  <li><%= link_to "Delete a pet off of the site", users_path %></li>
-</ul>
+<table>
+    <% @animals.in_groups_of(1) do |animal| %>
+    <tr>
+      <% animal.each do |animal| %>
+      <td><a href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
+      <td><a href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
+      <% end %>
+    </tr>
+    <% end %>
+</table>

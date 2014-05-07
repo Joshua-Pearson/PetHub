@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
-   before_filter :current_user, only: [:create, :new, :edit, :update, :destroy]
+   load_and_authorize_resource 
+   # before_filter :current_user, only: [:create, :new, :edit, :update, :destroy, :index]
 
   def index
-    @users = User.all
+    @user = current_user
+    @animals = current_user.animals
   end
 
   def show

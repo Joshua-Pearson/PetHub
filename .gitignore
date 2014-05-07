@@ -51,3 +51,5 @@ build/
 
 #ignore env file
 .env
+
+public/uploads

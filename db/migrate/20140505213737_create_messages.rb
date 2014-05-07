@@ -4,6 +4,7 @@ class CreateMessages < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.references :animal, index: true
+      t.references :user, index: true
 
       t.timestamps
     end

@@ -1,13 +1,20 @@
 <h1 id="mainWelcome"> Welcome to PetHub </h1>
 
 <ul class="menu-left">
-  <li><%= link_to "Browse Pets Available", animals_path %></li>
-  <li><%= link_to "Browse People", users_path %></li>
+  <li><%= link_to "Browse All Pets Available", animals_path %></li>
+</ul>
+<ul>
+  <h4> Or </h4>
+  <h5>Browse by pet type:</h5>
+  <li><%= link_to "Browse Dogs Available", animals_path %></li>
+  <li><%= link_to "Browse Cats Available", animals_path %></li>
+
+
 </ul>
 
 <ul class="menu-right">
   <% if current_user %>
-  <li><%= link_to "My Profile", user_path(current_user) %></li>
+  <li><%= link_to "My Profile", session_path(current_user) %></li>
   <% end %>
 </ul>
 

@@ -1,11 +1,24 @@
-
 <div class="pet">
   <p><%= @animal.name %></p>
   <%= image_tag @animal.image.url %>
+
   <div class="actions">
-    <%= link_to "Edit", edit_animal_path(@animal) %>
-    <%= link_to "Remove", @animal, :confirm => 'Are you sure?', :method => :delete %>
+    <% if can? :update, @animal %>
+      <%= link_to "Edit", edit_animal_path(@animal) %>
+    <% end %>
+
+    <% if can? :destroy, @animal %>
+      <%= link_to "Remove", @animal, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
+   <h5><%= @animal.name %> is a <%= @animal.age %> year old <%= @animal.breed %> <%= @animal.species %>. </h5>
   </div>
+</div>
+<div class="threadButton">
+  <% if can? :manage, @animal %>
+    <%= link_to "Post a new Thread for this pet", new_animal_message_path(@animal) %>
+  <% else %>
+    <%= link_to "Reply to the Thread for this pet.", animal_message_path(@animal) %>
+  <% end %>
 </div>
 
 

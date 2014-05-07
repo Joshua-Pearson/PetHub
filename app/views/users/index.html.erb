@@ -1,4 +1,16 @@
-<p><%= current_user.inspect %></p>
+<br><br><br><br><h2> Welcome <%= current_user.name %></h2>
 
-<p><%= @users.inspect %></p>
+<table>
+    <% @animals.in_groups_of(1) do |animal| %>
+    <tr>
+      <% animal.each do |animal| %>
+      <td><a href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
+      <td><a href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
+      <% end %>
+    </tr>
+    <% end %>
+</table>
+
+
+
 
