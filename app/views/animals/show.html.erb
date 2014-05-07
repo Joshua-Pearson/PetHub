@@ -1,7 +1,7 @@
 
 <div class="pet">
   <p><%= @animal.name %></p>
-  <%= image_tag @animal.image.url.to_s %>
+  <%= image_tag @animal.image.url %>
   <div class="actions">
     <%= link_to "Edit", edit_animal_path(@animal) %>
     <%= link_to "Remove", @animal, :confirm => 'Are you sure?', :method => :delete %>

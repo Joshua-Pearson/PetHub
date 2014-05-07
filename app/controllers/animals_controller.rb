@@ -1,4 +1,6 @@
 class AnimalsController < ApplicationController
+  include AnimalsHelper
+
   before_filter :current_user, only: [:create, :new, :edit, :update, :destroy]
   before_filter :check_animal_owner, only: [:edit, :update, :destroy]
 
@@ -15,7 +17,8 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    animal = Animal.create animal_params
+    animal = Animal.new animal_params
+    animal.save!
     redirect_to(animal)
   end
 
@@ -25,7 +28,7 @@ class AnimalsController < ApplicationController
 
 private
   def animal_params
-    params.require(:animal).permit(:name, :species, :breed, :image, :age)
+    params.require(:animal).permit(:name, :species, :breed, :age, :image)
   end
 
 end

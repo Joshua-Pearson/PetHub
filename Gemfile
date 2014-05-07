@@ -6,6 +6,9 @@ gem 'rails', '4.0.4'
 #Using postgres for database
 gem 'pg'
 
+#using cancan to set users authorizations
+gem 'cancan'
+
 #using carrierwave for picture uploading
 gem 'carrierwave'
 gem 'rmagick'

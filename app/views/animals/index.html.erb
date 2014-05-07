@@ -3,7 +3,6 @@
 <% @animals.each do |pet| %>
   <ul>
     <a href='/animals/<%= pet.id %>'><%= pet.name %></a>
-    <%= image_tag pet.image_url.to_s %>
+    <%= image_tag pet.image.url %>
   </ul>
- <% binding.pry %>
 <% end %>

@@ -2,6 +2,24 @@ class MessagesController < ApplicationController
    before_filter :current_user, only: [:create, :new, :edit, :update, :destroy]
    before_filter :check_message_owner, only: [:edit, :update, :destroy]
 
+   def new
+   end
+
+   def create
+   end
+
+   def show
+   end
+
+   def edit
+   end
+
+   def update
+   end
+
+   def destroy
+   end
+
 private
   def message_params
     params.require(:message).permit(:title, :description)
