@@ -1,7 +1,7 @@
 class Message < ActiveRecord::Base
   belongs_to :animal
+  belongs_to :user
   # belongs_to :user, through: :animal
-  has_many :comments
 
   validates :title, presence: true, length: {minimum: 2, maximum: 40}
   validates :description, presence: true, length: {minimum: 2, maximum: 1000}

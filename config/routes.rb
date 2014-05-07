@@ -6,9 +6,7 @@ PetHub::Application.routes.draw do
 resources :users
 resources :sessions, :only => [:create, :show, :destroy]
 resources :animals do
-  resources :messages do
-    resources :comments
-  end
+  resources :messages
 end
 
 root 'welcome#index'
