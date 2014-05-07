@@ -1,9 +1,9 @@
 <br><br><br><br><h2> Welcome <%= current_user.name %></h2>
 
 <table>
-    <% @animals.in_groups_of(1) do |animal| %>
+    <% @animals.in_groups_of(1) do |batch| %>
     <tr>
-      <% animal.each do |animal| %>
+      <% batch.each do |animal| %>
       <td><a href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
       <td><a href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
       <% end %>

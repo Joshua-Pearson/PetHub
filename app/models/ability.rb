@@ -6,15 +6,14 @@ class Ability
     can :read, :all
     
     can :create, Animal
-    can :create, Comment
     can :create, Message
     
     can :manage, Animal do |animal|
       animal && animal.user == user
     end
-    
-    can :manage, Comment do |comment|
-      comment && comment.user == user
+
+    can :manage, Message do |message|
+      message && message.user == user
     end
 
     # can :manage, Message do |message|

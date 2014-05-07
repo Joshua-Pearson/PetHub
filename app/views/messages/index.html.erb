@@ -1,4 +1,23 @@
 
+<h1><%= @animal.name %></h1>
+
+
+<%= @animal.name %></h1>
 
 
 <%= @messages.inspect %>
+
+<hr/>
+
+<h1> New Message </h1>
+
+<h2><%= @animal.name %>'s board </h2>
+
+<div>Please start a thread for your pet...include any relevant details for when your pet is available to be loaned out.</div>
+
+<%= form_for([@animal, @message]) do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description, :autofocus => true, :placeholder => "Your Message", :size => "50x10" %>
+  <%= f.submit %>
+
+<% end %>

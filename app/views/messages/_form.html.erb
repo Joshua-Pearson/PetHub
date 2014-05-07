@@ -1,9 +1,0 @@
-<h2><%@animal.name%>'s board </h2>
-
-<%= form_for([@animal, @message]) do |f| %>
-  <%= f.label :description %>
-  <%= f.text_field :description, :autofocus => true, :placeholder => "Please start a thread for your pet...include any relevant details for when your pet is available to be loaned out.", :size => "50x10" %>
-
-<% end %>
-
-  
