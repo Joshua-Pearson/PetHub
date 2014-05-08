@@ -4,30 +4,41 @@
 
 #mainWelcome {
   text-align: center;
-  color: navy blue;
-  padding: 80px 0 0 0;
+  color: white;
+  padding: 0 0 0 0;
 }
 
 #mainSecond {
   text-align: center;
-  color: rgba(0, 63, 76, 0.8);
+  color: orange;
 }
 
 .welcomeMenuLeft {
-  padding: 20px 0 0 15px;
+  padding: 60px 0 0 7px;
+  color: black;
 }
 
 #othersSaid {
   padding: 40px 0 0 15px;
+  color: white;
 }
 
 #welcomeComments {
   padding: 20px 0 0 15px;
   font-size: 13px;
+  color: white;
 }
 
 #disclaimer {
   padding: 160px 0 0 0;
   font-size: 10px;
+  color: white;
+}
+.welcomeMenuLeftButtons {
+  padding: 0 0 0 5px;
+  color: red;
+}
+a {
+  text-decoration: none;
 }
 

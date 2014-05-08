@@ -3,9 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .animalImageIndex img {
-  height: 80px;
-  width: 120px;
-  padding: 5px 10px 0 0;
+  height: 60px;
+  width: 60px;
   box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;
 }
 
@@ -15,16 +14,21 @@
 
 #animalIndexHeadline {
   text-align:center;
+  color: white;
+  font-family: 'Corben', Georgia, Times, serif;
+  font-size: 60px;
 }
 
 .animalTextIndex {
+  color: orange;
   padding: 10px 0 10px 0;
 }
 
 .pet img {
   height: 200px;
   width: 200px;
-  padding: 75px 0 0 0;
+  position: relative;
+  display: block;
   margin: 0 auto;
   box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;
 }

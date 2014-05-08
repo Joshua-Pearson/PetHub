@@ -13,7 +13,7 @@
 <% end %>
 
 
-<h2> <%= (Time.now.localtime - 24.hour).strftime("%B %d") %> </h2>
+<h2 class="date"> <%= (Time.now.localtime - 24.hour).strftime("%B %d") %> </h2>
   <% @animals_yesterday.each do |animal| %>
     <div class="row">
       <div class="col-xs-1">
@@ -28,7 +28,7 @@
     </div>
   <% end %>
 
-<h2> This Past Week </h2>
+<h2 class="date"> This Past Week </h2>
   <table>
     <% @animals_this_week.in_groups_of(1) do |animal| %>
       <tr>

@@ -5,5 +5,5 @@ describe User do
     user = User.create(name: 'Josh Pearson', email: 'josh@josh.com')
     user.should respond_to(:name)
     user.should respond_to(:email)
-end
   end
+end

@@ -33,12 +33,27 @@ body {
 
 h1 {
   padding: 60px 0 15px 0;
+  font-family: 'Corben', Georgia, Times, serif;
+  font-size: 60px;
+  line-height: 75px;;
+}
+
+h2 {
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+h3 {
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+h4 {
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
 }
 
 img {
   height: 60px;
   width: 60px;
-  box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;
+  box-shadow: 0px 0px 0px 5px #000;
 }
 
 #messageBoardImage img {
@@ -49,33 +64,44 @@ img {
 #signedInAs {
   color: white;
   float: right;
-  padding: 0 30px 0 0;
+  font-size: 15px;
+  padding: 20px 30px 0 0;
 }
 
 #signinwithFacebook {
-  padding: 10px 30px 0 0;
+  padding: 30px 30px 0 0;
   float: right;
 }
 
 #userHome {
   float: right;
-  padding: 0 143px 0 0;
+  padding: 0 160px 0 0;
+  font-size: 12px;
 }
 
 #userProfile {
   float: right;
-  padding: 0 117px 0 0;
+  padding: 0 140px 0 0;
+  font-size: 11px;
 }
 
 #userSignOut {
   float: right;
-  padding: 0 127px 0 0;
+  padding: 0 147px 0 0;
+  font-size: 12px;
 }
 
 
 .navbar-brand {
-  font-size: 30px;
+  font-size: 40px;
   padding: 20px 0 0 15px;
+  font-family: 'Corben', Georgia, Times, serif;
+}
+
+.date {
+  padding: 0 0 15px 25px;
+  color: black;
+  font-family: 'Corben', Georgia, Times, serif;
 }
 
 
