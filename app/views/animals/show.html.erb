@@ -18,7 +18,9 @@
   <% if can? :manage, @animal %>
     <%= link_to "Edit Your Pet", edit_animal_path(@animal) %>
     <%= link_to "View the Message Board for this pet", animal_messages_path(@animal) %>
-  <% else %>
+  <% elsif current_user %>
     <%= link_to "Reply to the Thread for this pet.", animal_messages_path(@animal) %>
+  <% else %>
+    <%= link_to "Please sign in to View the Message Board for this pet.", root_path %>
   <% end %>
 </div>

@@ -1,0 +1,43 @@
+<% @animals_today.each do |animal| %>
+  <div class="row">
+    <div class="col-xs-1">
+      <td><a class="animalTextIndex" href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
+    </div>
+    <div class="col-xs-2">
+      <td><a class='animalImageIndex' href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
+    </div>
+    <div class="col-xs-2">
+      <td><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
+    </div>
+  </div>
+<% end %>
+
+
+<h2> <%= (Time.now.localtime - 24.hour).strftime("%B %d") %> </h2>
+  <% @animals_yesterday.each do |animal| %>
+    <div class="row">
+      <div class="col-xs-1">
+        <td><a class="animalTextIndex" href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
+      </div>
+      <div class="col-xs-2">
+        <td><a class='animalImageIndex' href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
+      </div>
+      <div class="col-xs-2">
+        <td><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
+      </div>
+    </div>
+  <% end %>
+
+<h2> This Past Week </h2>
+  <table>
+    <% @animals_this_week.in_groups_of(1) do |animal| %>
+      <tr>
+      <% animal.each do |animal| %>
+        <td><a class="animalTextIndex" href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
+        <td><a class='animalImageIndex' href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
+        <td><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
+      <% end %>
+      </tr>
+    <% end %>
+  </table>
+

@@ -1,3 +1,19 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#welcomeCurrentUser {
+  padding: 75px 0 0 0;
+  text-align: center;
+}
+
+.animalTextIndex {
+  padding: 10px 0 10px 0;
+}
+
+.animalImageIndex img {
+  height: 80px;
+  width: 120px;
+  padding: 5px 10px 10px 0;
+  box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;
+}

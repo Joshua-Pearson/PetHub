@@ -1,16 +1,16 @@
-<br><br><br><br><h2> Welcome <%= current_user.name %></h2>
+<h2 id="welcomeCurrentUser"> Welcome <%= current_user.name %></h2>
 
-<table>
-    <% @animals.in_groups_of(1) do |batch| %>
-    <tr>
-      <% batch.each do |animal| %>
-      <td><a href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
-      <td><a href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
-      <% end %>
-    </tr>
-    <% end %>
-</table>
-
-
-
+<% @animals.each do |animal| %>
+  <div class="row">
+    <div class="col-xs-1">
+      <td><a class="animalTextIndex" href='/animals/<%= animal.id %>/messages'><%= animal.name %></a></td>
+    </div>
+    <div class="col-xs-2">
+      <td><a class='animalImageIndex' href='/animals/<%= animal.id %>/messages'><%= image_tag animal.image.url %></a></td>
+    </div>
+    <div class="col-xs-2">
+      <td><a href='/animals/<%= animal.id %>/messages' %>Message Board</a></td>
+    </div>
+  </div>
+<% end %>
 

@@ -5,15 +5,35 @@
   </div>
  
   <div class="navbar-header navbar-right">
-    <div id="facebook">
-    <% if current_user %>
-      Signed in as <strong><%= current_user.name %></strong>
-      <%= link_to "Sign out", signout_path, id: "sign_out" %>
-    <% else %>
-      <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-    <% end %>
+    <div class="facebook">
+      <% if current_user %>
+        <div class="row">
+          <div id="signedInAs">
+            Signed in as <strong><%= current_user.name %></strong>
+          </div>
+        </div>
+        <div class="row">
+          <div id="userHome">
+            <%= link_to "Home", root_path %>
+          </div>
+        </div>
+        <div class="row">
+          <div id="userProfile">
+            <%= link_to "My Profile", session_path(current_user) %>
+          </div>
+        </div>
+        <div class="row">
+          <div id="userSignOut">
+            <%= link_to "Sign out", signout_path, id: "sign_out" %>
+          </div>
+        </div>
+    </div>
+      <% else %>
+        <div id="signinwithFacebook">
+          <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
-
- </nav>
+</nav>
 
