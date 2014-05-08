@@ -12,45 +12,38 @@ end
 root 'welcome#index'
 
 get '/users/:id/animals', to: 'users#index'
-#                      Prefix Verb     URI Pattern                                                          Controller#Action
-#                             GET|POST /auth/:provider/callback(.:format)                                   sessions#create
-#                auth_failure GET|POST /auth/failure(.:format)                                              redirect(301, /)
-#                     signout GET|POST /signout(.:format)                                                   sessions#destroy
-#                       users GET      /users(.:format)                                                     users#index
-#                             POST     /users(.:format)                                                     users#create
-#                    new_user GET      /users/new(.:format)                                                 users#new
-#                   edit_user GET      /users/:id/edit(.:format)                                            users#edit
-#                        user GET      /users/:id(.:format)                                                 users#show
-#                             PATCH    /users/:id(.:format)                                                 users#update
-#                             PUT      /users/:id(.:format)                                                 users#update
-#                             DELETE   /users/:id(.:format)                                                 users#destroy
-#                    sessions POST     /sessions(.:format)                                                  sessions#create
-#                     session GET      /sessions/:id(.:format)                                              sessions#show
-#                             DELETE   /sessions/:id(.:format)                                              sessions#destroy
-#     animal_message_comments GET      /animals/:animal_id/messages/:message_id/comments(.:format)          comments#index
-#                             POST     /animals/:animal_id/messages/:message_id/comments(.:format)          comments#create
-#  new_animal_message_comment GET      /animals/:animal_id/messages/:message_id/comments/new(.:format)      comments#new
-# edit_animal_message_comment GET      /animals/:animal_id/messages/:message_id/comments/:id/edit(.:format) comments#edit
-#      animal_message_comment GET      /animals/:animal_id/messages/:message_id/comments/:id(.:format)      comments#show
-#                             PATCH    /animals/:animal_id/messages/:message_id/comments/:id(.:format)      comments#update
-#                             PUT      /animals/:animal_id/messages/:message_id/comments/:id(.:format)      comments#update
-#                             DELETE   /animals/:animal_id/messages/:message_id/comments/:id(.:format)      comments#destroy
-#             animal_messages GET      /animals/:animal_id/messages(.:format)                               messages#index
-#                             POST     /animals/:animal_id/messages(.:format)                               messages#create
-#          new_animal_message GET      /animals/:animal_id/messages/new(.:format)                           messages#new
-#         edit_animal_message GET      /animals/:animal_id/messages/:id/edit(.:format)                      messages#edit
-#              animal_message GET      /animals/:animal_id/messages/:id(.:format)                           messages#show
-#                             PATCH    /animals/:animal_id/messages/:id(.:format)                           messages#update
-#                             PUT      /animals/:animal_id/messages/:id(.:format)                           messages#update
-#                             DELETE   /animals/:animal_id/messages/:id(.:format)                           messages#destroy
-#                     animals GET      /animals(.:format)                                                   animals#index
-#                             POST     /animals(.:format)                                                   animals#create
-#                  new_animal GET      /animals/new(.:format)                                               animals#new
-#                 edit_animal GET      /animals/:id/edit(.:format)                                          animals#edit
-#                      animal GET      /animals/:id(.:format)                                               animals#show
-#                             PATCH    /animals/:id(.:format)                                               animals#update
-#                             PUT      /animals/:id(.:format)                                               animals#update
-#                             DELETE   /animals/:id(.:format)                                               animals#destroy
-#                        root GET      /                                                                    welcome#index
-#                             GET      /users/:id/animals(.:format)                                         users#index
+#              Prefix Verb     URI Pattern                                     Controller#Action
+#                     GET|POST /auth/:provider/callback(.:format)              sessions#create
+#        auth_failure GET|POST /auth/failure(.:format)                         redirect(301, /)
+#             signout GET|POST /signout(.:format)                              sessions#destroy
+#               users GET      /users(.:format)                                users#index
+#                     POST     /users(.:format)                                users#create
+#            new_user GET      /users/new(.:format)                            users#new
+#           edit_user GET      /users/:id/edit(.:format)                       users#edit
+#                user GET      /users/:id(.:format)                            users#show
+#                     PATCH    /users/:id(.:format)                            users#update
+#                     PUT      /users/:id(.:format)                            users#update
+#                     DELETE   /users/:id(.:format)                            users#destroy
+#            sessions POST     /sessions(.:format)                             sessions#create
+#             session GET      /sessions/:id(.:format)                         sessions#show
+#                     DELETE   /sessions/:id(.:format)                         sessions#destroy
+#     animal_messages GET      /animals/:animal_id/messages(.:format)          messages#index
+#                     POST     /animals/:animal_id/messages(.:format)          messages#create
+#  new_animal_message GET      /animals/:animal_id/messages/new(.:format)      messages#new
+# edit_animal_message GET      /animals/:animal_id/messages/:id/edit(.:format) messages#edit
+#      animal_message GET      /animals/:animal_id/messages/:id(.:format)      messages#show
+#                     PATCH    /animals/:animal_id/messages/:id(.:format)      messages#update
+#                     PUT      /animals/:animal_id/messages/:id(.:format)      messages#update
+#                     DELETE   /animals/:animal_id/messages/:id(.:format)      messages#destroy
+#             animals GET      /animals(.:format)                              animals#index
+#                     POST     /animals(.:format)                              animals#create
+#          new_animal GET      /animals/new(.:format)                          animals#new
+#         edit_animal GET      /animals/:id/edit(.:format)                     animals#edit
+#              animal GET      /animals/:id(.:format)                          animals#show
+#                     PATCH    /animals/:id(.:format)                          animals#update
+#                     PUT      /animals/:id(.:format)                          animals#update
+#                     DELETE   /animals/:id(.:format)                          animals#destroy
+#                root GET      /                                               welcome#index
+#                     GET      /users/:id/animals(.:format)                    users#index
+
 end

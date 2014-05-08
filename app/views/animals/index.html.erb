@@ -1,18 +1,18 @@
-<h1> <%= Date.today %> </h1>
+<h1> <%= Time.now.strftime("%B %d") %> </h1>
 
 <table>
     <% @animals_today.in_groups_of(1) do |animal| %>
     <tr>
       <% animal.each do |animal| %>
       <td><a href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
-      <td><a href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
+      <td><a class='animalImageIndex' href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
       <td><%= animal.created_at.strftime("%B %d at %I:%M %p") %></td>
       <% end %>
     </tr>
     <% end %>
 </table>
 
-<h2> <%= Date.yesterday %> </h2>
+<h2> <%= (Date.today - 24.hour).strftime("%B %d") %> </h2>
   <table>
     <% @animals_yesterday.in_groups_of(1) do |animal| %>
     <tr>

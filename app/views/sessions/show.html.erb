@@ -5,7 +5,6 @@
 <p><%= current_user.inspect %></p>
 
   <ul>
-  <li><%= link_to "View your pet", animal_path %></li>
   <li><a href='/users/<%= current_user.id %>/animals/'>View your current pets</a></li>
   <li><%= link_to "Add a new pet", new_animal_path %></li>
 </ul>

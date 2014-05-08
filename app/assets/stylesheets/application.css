@@ -14,9 +14,7 @@
  */
 
 h1 {
-  text-align: center;
   padding: 50px 0 0 0;
-  color: blue;
 }
 p {
   padding: 100px 0 0 0;
@@ -24,3 +22,14 @@ p {
 #facebook {
   color: white;
 }
+img {
+  height: 40px;
+  width: 40px;
+}
+#messageBoardImage {
+  height: 300px;
+  width: 300px;
+}
+
+
+

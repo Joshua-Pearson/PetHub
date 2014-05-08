@@ -12,8 +12,8 @@ class MessagesController < ApplicationController
 
    def create
     @message = @animal.messages.build message_params
-    @message.title = @animal.name
     @message.animal = @animal
+    @message.user_id = current_user.id
     @message.save!
     redirect_to animal_messages_path(@animal)
    end
@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
 
 private
   def message_params
-    params.require(:message).permit(:description)
+    params.require(:message).permit(:description, :title)
   end
 
   def load_animal
