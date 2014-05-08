@@ -7,13 +7,16 @@ class MessagesController < ApplicationController
 
    def index
     @messages = @animal.messages
+   end
+
+   def new
     @message = @animal.messages.build
    end
 
    def create
     @message = @animal.messages.build message_params
     @message.animal = @animal
-    @message.user_id = current_user.id
+    @message.user = current_user
     @message.save!
     redirect_to animal_messages_path(@animal)
    end

@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   has_many :animals
-  has_many :comments
-  has_many :messages, through: :animals
+  has_many :messages
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

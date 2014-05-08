@@ -16,17 +16,15 @@
 h1 {
   padding: 50px 0 0 0;
 }
-p {
-  padding: 100px 0 0 0;
-}
+
 #facebook {
   color: white;
 }
 img {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
 }
-#messageBoardImage {
+#messageBoardImage img {
   height: 300px;
   width: 300px;
 }

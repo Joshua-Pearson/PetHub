@@ -1,21 +1,15 @@
 class AnimalsController < ApplicationController
   include AnimalsHelper
   load_and_authorize_resource 
-  #   rescue_from CanCan::AccessDenied do |exception|
-  #     redirect_to root_url, :alert => exception.message
-  #  end
-
-  #  before_filter :current_user, only: [:create, :new, :edit, :update, :destroy]
-  #  before_filter :check_animal_owner, only: [:edit, :update, :destroy]
 
   def index
-    @animals_today = Animal.today
-    @animals_yesterday = Animal.yesterday
+    @animals_today = Animal.today.my_order
+    @animals_yesterday = Animal.yesterday.my_order
+    @animals_this_week = Animal.this_week.my_order
   end
 
   def show
     @animal = Animal.find(params[:id])
-    unauthorized! if cannot? :show, @animal
   end
 
   def new
@@ -25,8 +19,6 @@ class AnimalsController < ApplicationController
   def create
     animal = Animal.new animal_params
     animal.user = current_user
-    # animal.image => size: "40x40"
-    binding.pry
     animal.save
     if animal.save
       flash[:notice] = "Successfully added your pet to the site"
@@ -37,22 +29,23 @@ class AnimalsController < ApplicationController
   end
 
   def edit
-    @animal = Animal.find(params[:id])
-    unauthorized! if cannot? :update, @animal
+    animal = Animal.find(params[:id])
+    authorize! :edit, @animal
   end
 
   def update
     animal = Animal.find(params[:id])
     animal.update_attributes animal_params
+    authorize! :update, @animal
     redirect_to(animal)
-    unauthorized! if cannot? :update, @animal
+    
   end
 
   def destroy
     animal = Animal.find(params[:id])
+    authorize! :edit, @animal
     animal.delete
     redirect_to(animals_path)
-    unauthorized! if cannot? :destroy, @animal
   end
 
 private

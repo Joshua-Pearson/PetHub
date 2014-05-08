@@ -2,11 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.animalImageIndex {
+.animalImageIndex img {
   height: 75px;
   width: 75px;
+  padding: 0 10px 0 0;
 }
 
 .form {
   
+}
+
+#animalIndexHeadline {
+  text-align:center;
+}
+
+.animalTextIndex {
+  padding: 0 10px 0 0;
+}
+
+.pet img {
+  height: 200px;
+  width: 200px;
+  padding: 75px 0 0 0;
+  margin: 0 auto;
 }

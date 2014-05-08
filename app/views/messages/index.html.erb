@@ -1,25 +1,46 @@
 
-<h1><%= @animal.name %>'s Board</h1>
+<h1 id="animalShowPageMain"><%= @animal.name %>'s Board</h1>
   <div id ="messageBoardImage">
     <%= image_tag @animal.image.url %>
   </div>
-<hr/>
-
-<div class="animalDescription"><h2><%= @animal.description %></h2></div>
-<% if @messages %>
-  <% @messages.each do |message| %>
-    <p><%=  message.user.name %></p>
-    <p><%=  message.title %></p>
-    <p><%=  message.description %> </p>
-  <% end %>
-<% end %>
-
-<h1> New Message </h1>
-<%= form_for([@animal, @message]) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, :placeholder => "Title of your message" %>
-  <%= f.label :description %>
-  <%= f.text_field :description, :placeholder => "Your Message", :size => "50x10" %>
-  <%= f.submit %>
-
-<% end %>
+  <div class="animalDescription"><h2><%= @animal.description %></h2></div>
+<hr/><hr/>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Messages
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <% if @messages != nil %>
+          <% @messages.sort.each do |message| %>
+          <div class="row">
+            <div class="col-xs-2">
+              <p>Author:<br> <%=  message.user.name %></p>
+            </div>
+            <div class="col-xs-2">
+              <img class="humanBoardImage" src="<%=message.user.image%>"/>
+            </div>
+            <div class="col-xs-4">
+              <p>Title:<br> <%=  message.title %></p>
+            </div>
+            <div class="col-xs-4">
+              <%=  message.description %><br></br>
+            </div>
+          </div>
+          <% end %>
+        <% end %> 
+      </div>
+    </div>
+  </div>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="/animals/<%=@animal.id%>/messages/new">Add A Message</a></li>
+</div>

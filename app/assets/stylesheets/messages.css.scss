@@ -3,9 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#messageBoardImage {
+#messageBoardImage img {
   height: 300px;
   width: 300px;
+  display: block;
   border: none;
   margin: 0 auto;
+}
+
+#animalShowPageMain {
+  text-align: center;
 }

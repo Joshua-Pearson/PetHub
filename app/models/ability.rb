@@ -7,15 +7,14 @@ class Ability
     
     can :create, Animal
     can :create, Message
-    can :manage, Message
     
     can :manage, Animal do |animal|
       animal && animal.user == user
     end
 
-    # can :manage, Message do |message|
-    # message && message.user == user
-    # end
+    can :manage, Message do |message|
+    message && message.user == user
+    end
 
     # Define abilities for the passed in user here. For example:
     #
