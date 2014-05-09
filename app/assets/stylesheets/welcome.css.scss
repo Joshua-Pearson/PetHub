@@ -34,10 +34,15 @@
   font-size: 10px;
   color: white;
 }
+
 .welcomeMenuLeftButtons {
   padding: 0 0 0 5px;
-  color: red;
 }
+
+.welcomeMenuLeftButtons li {
+  color: black;
+}
+
 a {
   text-decoration: none;
 }

@@ -19,16 +19,23 @@
   font-size: 60px;
 }
 
-.animalTextIndex {
+.pet {
   color: orange;
-  padding: 10px 0 10px 0;
+  padding: 20px 0 0 0;
+  text-align: center;
 }
 
 .pet img {
-  height: 200px;
-  width: 200px;
-  position: relative;
+  height: 160px;
+  width: 160px;
   display: block;
-  margin: 0 auto;
+  margin: 30px auto;
   box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;
+}
+
+.actions {
+  color: white;
+  margin: 0 0 100px 0;
+  padding: 0 0 100px 0;
+  text-align: center;
 }

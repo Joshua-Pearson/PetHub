@@ -1,4 +1,4 @@
-<h1> Add your Message to <%=@animal.name%>'s Board </h1>
+<h1 class="addMessagetoBoard"> Add your Message to <%=@animal.name%>'s Board </h1>
 <%= form_for ([@animal, @message]) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title, :placeholder => "Title of your message" %>

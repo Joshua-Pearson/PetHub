@@ -3,5 +3,4 @@ class WelcomeController < ApplicationController
     messages = Message.all
     @message = messages.my_random
   end
-
 end

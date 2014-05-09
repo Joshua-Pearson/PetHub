@@ -1,46 +1,52 @@
-
-<h1 id="animalShowPageMain"><%= @animal.name %>'s Board</h1>
-  <div id ="messageBoardImage">
-    <%= image_tag @animal.image.url %>
+<div class="row">
+  <div class="col-xs-6">
+    <h2 id="animalShowPageMain"><%= @animal.name %>'s Board</h2>
+      <div id ="messageBoardImage">
+        <%= image_tag @animal.image.url %>
+      </div>
+      <p id="ownerName"> Owner: <%=@animal.user.name %> </p>
+      <a href="/users/<%= @animal.user.id %>"><img id="ownerImg" src="<%= @animal.user.image %>"/></a>
   </div>
-  <div class="animalDescription"><h2><%= @animal.description %></h2></div>
-<hr/><hr/>
+  <div class="col-xs-6">
+    <div class="animalDescription"><h2><%= @animal.description %></h2>
+    </div>
+  </div>
+</div>
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-          Messages
-        </a>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Messages</a>
       </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in">
-      <div class="panel-body">
-        <% if @messages != nil %>
-          <% @messages.sort.each do |message| %>
-          <div class="row">
-            <div class="col-xs-2">
-              <p>Author:<br> <%=  message.user.name %></p>
-            </div>
-            <div class="col-xs-2">
-              <img class="humanBoardImage" src="<%=message.user.image%>"/>
-            </div>
-            <div class="col-xs-4">
-              <p>Title:<br> <%=  message.title %></p>
-            </div>
-            <div class="col-xs-4">
-              <%=  message.description %><br></br>
-            </div>
-          </div>
-          <% end %>
-        <% end %> 
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <% if @messages != nil %>
+            <% @messages.sort.each do |message| %>
+              <div class="row">
+                <div class="col-xs-2">
+                  <p>Author:<br> <%=  message.user.name %></p>
+                </div>
+                <div class="col-xs-2">
+                  <img class="humanBoardImage" src="<%=message.user.image%>"/>
+                </div>
+                <div class="col-xs-4">
+                  <p>Title:<br> <%=  message.title %></p>
+                </div>
+                <div class="col-xs-4">
+                  <%=  message.description %><br></br>
+                </div>
+              </div>
+            <% end %>
+          <% end %> 
+        </div>
       </div>
-    </div>
   </div>
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    Action <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="/animals/<%=@animal.id%>/messages/new">Add A Message</a></li>
+    <% if current_user %>
+      <div id="reply">
+      <a href="/animals/<%=@animal.id%>/messages/new" class="btn btn-primary btn-md" role="button">Add Your Reply</a>
+      </div>
+    <% else %>
+      <a href="/">Please sign in to add a message to this board.</a>
+    <% end %>
 </div>

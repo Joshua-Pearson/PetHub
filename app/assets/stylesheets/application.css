@@ -56,11 +56,6 @@ img {
   box-shadow: 0px 0px 0px 5px #000;
 }
 
-#messageBoardImage img {
-  height: 300px;
-  width: 300px;
-}
-
 #signedInAs {
   color: white;
   float: right;
@@ -99,9 +94,19 @@ img {
 }
 
 .date {
-  padding: 0 0 15px 25px;
+  padding: 0 0 15px 65px;
   color: black;
   font-family: 'Corben', Georgia, Times, serif;
+}
+
+.createdAt {
+  color: yellow;
+  padding: 10px 0 0 0;
+}
+
+.animalTextIndex {
+  color: orange;
+  margin: 10px 0 0 0;
 }
 
 

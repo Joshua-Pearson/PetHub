@@ -3,7 +3,7 @@ PetHub::Application.routes.draw do
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
-resources :users
+resources :users, :only => [:index, :show]
 resources :sessions, :only => [:create, :show, :destroy]
 resources :animals do
   resources :messages
@@ -12,18 +12,13 @@ end
 root 'welcome#index'
 
 get '/users/:id/animals', to: 'users#index'
+
 #              Prefix Verb     URI Pattern                                     Controller#Action
 #                     GET|POST /auth/:provider/callback(.:format)              sessions#create
 #        auth_failure GET|POST /auth/failure(.:format)                         redirect(301, /)
 #             signout GET|POST /signout(.:format)                              sessions#destroy
 #               users GET      /users(.:format)                                users#index
-#                     POST     /users(.:format)                                users#create
-#            new_user GET      /users/new(.:format)                            users#new
-#           edit_user GET      /users/:id/edit(.:format)                       users#edit
 #                user GET      /users/:id(.:format)                            users#show
-#                     PATCH    /users/:id(.:format)                            users#update
-#                     PUT      /users/:id(.:format)                            users#update
-#                     DELETE   /users/:id(.:format)                            users#destroy
 #            sessions POST     /sessions(.:format)                             sessions#create
 #             session GET      /sessions/:id(.:format)                         sessions#show
 #                     DELETE   /sessions/:id(.:format)                         sessions#destroy

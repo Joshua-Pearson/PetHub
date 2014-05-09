@@ -4,6 +4,9 @@ class Ability
   def initialize(user)
     user ||= User.new
     can :read, :all
+
+    can :create, Message
+    can :create, Animal
         
     can :manage, Animal do |animal|
       animal && animal.user == user

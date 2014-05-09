@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-   load_and_authorize_resource 
-   # before_filter :current_user, only: [:create, :new, :edit, :update, :destroy, :index]
+  load_and_authorize_resource 
 
   def index
     @user = current_user
@@ -8,6 +7,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
   end
 end

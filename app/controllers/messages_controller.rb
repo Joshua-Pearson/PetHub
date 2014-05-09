@@ -1,7 +1,5 @@
 class MessagesController < ApplicationController
   load_and_authorize_resource
-   # before_filter :current_user, only: [:create, :new, :edit, :update, :destroy]
-   # before_filter :check_message_owner, only: [:edit, :update, :destroy]
 
    before_action :load_animal, only: [:index, :new, :create, :show, :edit]
 

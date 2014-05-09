@@ -6,8 +6,10 @@
     <div class="col-xs-2">
       <td><a class='animalImageIndex' href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
     </div>
-    <div class="col-xs-2">
-      <td><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
+    <div class="col-xs-3">
+      <div class="createdAt">
+        <td>Added<br><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
+      </div>
     </div>
   </div>
 <% end %>
@@ -23,21 +25,27 @@
         <td><a class='animalImageIndex' href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
       </div>
       <div class="col-xs-2">
-        <td><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
+        <div class="createdAt">
+          <td>Added<br><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
+        </div>
       </div>
     </div>
   <% end %>
 
 <h2 class="date"> This Past Week </h2>
-  <table>
-    <% @animals_this_week.in_groups_of(1) do |animal| %>
-      <tr>
-      <% animal.each do |animal| %>
+  <% @animals_this_week.each do |animal| %>
+    <div class="row">
+      <div class="col-xs-1">
         <td><a class="animalTextIndex" href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
+      </div>
+      <div class="col-xs-2">
         <td><a class='animalImageIndex' href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
-        <td><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
-      <% end %>
-      </tr>
-    <% end %>
-  </table>
+      </div>
+      <div class="col-xs-2">
+        <div class="createdAt">
+          <td>Added<br><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
+        </div>
+      </div>
+    </div>
+  <% end %>
 

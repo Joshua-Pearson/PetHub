@@ -4,14 +4,42 @@
 
 
 #messageBoardImage img {
-  height: 300px;
-  width: 300px;
-  display: block;
-  border: none;
-  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+  margin: 30px 0 0 50px;
   box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;
 }
 
 #animalShowPageMain {
-  text-align: center;
+  padding: 90px 0 10px 20px;
+  font-size: 40px;
+  font-family: 'Corben', Georgia, Times, serif;
+  color: white;
+}
+
+.animalDescription {
+  color: white; 
+  font-family: 'Corben', Georgia, Times, serif;
+  margin: 0 auto;
+  padding: 200px 0 0 0;
+}
+
+#reply {
+  color: black;
+}
+
+#addMessagetoBoard {
+  color: orange;
+  padding: 200px 0 0 0;
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+#ownerImg {
+  margin: 10px 0 30px 60px;
+}
+
+#ownerName {
+  color: white;
+  padding: 30px 0 0 30px;
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
 }

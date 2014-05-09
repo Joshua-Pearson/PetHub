@@ -23,6 +23,7 @@
     </div>
     <div id="welcomeComments">
       <em><strong><%= @message.description %></strong></em><br><br>
+          <img src="<%= @message.user.image %>"/>
       <strong>--<%= @message.user.name %></strong>
     </div>
   </div>

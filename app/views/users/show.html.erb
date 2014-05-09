@@ -1,12 +1,13 @@
-<br><br><br><br><h2> Welcome <%= current_user.name %></h2>
-
-<table>
-    <% @animals.in_groups_of(1) do |animal| %>
-    <tr>
-      <% animal.each do |animal| %>
-      <td><a href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
-      <td><a href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
-      <% end %>
-    </tr>
-    <% end %>
-</table>
+<div class="row">
+  <div class="col-xs-6">
+    <img id="showUserPicture" src="<%= @user.image %>"/></h1>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="userShowDescription">
+        <h2><%= @user.name %></h2>
+        <h2><%= @user.email %></h2>
+      </div>
+  </div>
+</div>

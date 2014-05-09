@@ -7,7 +7,7 @@ class Message < ActiveRecord::Base
 
   def self.my_random
     if (c = count) != 0
-      find(:first, :offset =>rand(c))
+      first(:offset =>rand(c))
     end
   end
 
