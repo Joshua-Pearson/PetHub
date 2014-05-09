@@ -1,6 +1,6 @@
 <div class="pet">
-  <h1><%= @animal.name %></h1>
-  <a href="/animals/<%= @animal.id %>/messages"><%= image_tag @animal.image.url %></a>
+  <h1 id="petShowPageName"><%= @animal.name %></h1>
+  <a id="petShowPageImg" href="/animals/<%= @animal.id %>/messages"><%= image_tag @animal.image.url %></a>
 </div>
 
 <div class="actions">
