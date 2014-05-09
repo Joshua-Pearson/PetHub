@@ -10,5 +10,4 @@ class Message < ActiveRecord::Base
       first(:offset =>rand(c))
     end
   end
-
 end

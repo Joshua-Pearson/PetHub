@@ -1,5 +1,4 @@
 class AnimalsController < ApplicationController
-  include AnimalsHelper
   load_and_authorize_resource 
 
   def index
@@ -37,8 +36,7 @@ class AnimalsController < ApplicationController
     animal = Animal.find(params[:id])
     animal.update_attributes animal_params
     authorize! :update, @animal
-    redirect_to(animal)
-    
+    redirect_to(animal)  
   end
 
   def destroy
@@ -48,9 +46,8 @@ class AnimalsController < ApplicationController
     redirect_to(animals_path)
   end
 
-private
-  def animal_params
-    params.require(:animal).permit(:name, :species, :breed, :age, :image, :description)
-  end
-
+  private
+    def animal_params
+      params.require(:animal).permit(:name, :species, :breed, :age, :image, :description)
+    end
 end

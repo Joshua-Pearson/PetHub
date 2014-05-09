@@ -14,10 +14,9 @@ class ApplicationController < ActionController::Base
      params[resource] &&= send(method) if respond_to?(method, true)
    end
 
-private
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
-  helper_method :current_user
-
+  private
+    def current_user
+      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    end
+    helper_method :current_user
 end

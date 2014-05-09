@@ -23,13 +23,12 @@ class MessagesController < ApplicationController
     @message = @animal.message
    end
 
-private
-  def message_params
-    params.require(:message).permit(:description, :title)
-  end
+  private
+    def message_params
+      params.require(:message).permit(:description, :title)
+    end
 
-  def load_animal
-    @animal = Animal.find(params[:animal_id])
-  end
-
+    def load_animal
+      @animal = Animal.find(params[:animal_id])
+    end
 end

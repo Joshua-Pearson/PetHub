@@ -3,19 +3,19 @@
   <a href="/animals/<%= @animal.id %>/messages"><%= image_tag @animal.image.url %></a>
 </div>
 
-  <div class="actions">
-    <% if can? :update, @animal %>
-      <%= link_to "Edit", edit_animal_path(@animal) %>
-    <% end %>
+<div class="actions">
+  <% if can? :update, @animal %>
+    <%= link_to "Edit", edit_animal_path(@animal) %>
+  <% end %>
 
-    <% if can? :destroy, @animal %>
-      <%= link_to "Remove", @animal, :confirm => 'Are you sure?', :method => :delete %>
-    <% end %><br>
-    <% if current_user %>
-      <%= link_to "View the Message Board for this pet", animal_messages_path(@animal) %>
-    <% else %>
-      <%= link_to "Please sign in to View the Message Board for this pet.", root_path %>
-    <% end %>
+  <% if can? :destroy, @animal %>
+    <%= link_to "Remove", @animal, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %><br>
+  
+  <% if current_user %>
+    <%= link_to "View the Message Board for this pet", animal_messages_path(@animal) %>
+  <% else %>
+    <%= link_to "Please sign in to View the Message Board for this pet.", root_path %>
+  <% end %>
    <h3><%= @animal.name %> is a <%= @animal.age %> year old <%= @animal.breed %> <%= @animal.species %>. </h3>
-  </div>
 </div>
