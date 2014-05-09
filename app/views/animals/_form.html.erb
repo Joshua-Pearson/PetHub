@@ -1,4 +1,4 @@
-<div class ="form">
+<form role="form" id="form">
   <%= form_for @animal, :html => {:multipart => true} do |f| %>
     <% if @animal.errors.any? %>
       <div id="error_explanation">
@@ -25,10 +25,10 @@
     <%= f.label :description %>
     <%= f.text_area :description, :placeholder => "Short description of your pet and the times available for loaning", :size => "50x10" %><br>
     
-    <h5> Upload an image here</h5>
-    <%= f.file_field :image %><br>
+    <h5 id="fileChosen"> Upload an image here
+    <%= f.file_field :image %></h5>
     
     <%= f.submit  class: "btn btn-primary" %>
   <% end %>
-</div>
+</form>
 

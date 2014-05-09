@@ -8,8 +8,27 @@
   box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;
 }
 
-.form {
-  
+form {
+  text-align: center;
+}
+
+input#animal_image {
+  position: relative;
+  margin: 0 0 0 360px;
+}
+
+input {
+  color: black;
+  width: 270px;
+}
+
+label {
+  color: white;
+}
+
+h5#fileChosen {
+  color: white;
+  margin: 0 0 10px 0;
 }
 
 #animalIndexHeadline {
@@ -38,4 +57,10 @@
   margin: 0 0 100px 0;
   padding: 0 0 100px 0;
   text-align: center;
+}
+
+#addaNewPet {
+  color: white;
+  text-align: center;
+  padding: 70px 0 0 0;
 }
