@@ -8,6 +8,7 @@ cody = Animal.create(:name => 'Cody', :species => 'Dog', :breed => "Yellow Lab",
 joker = Animal.create(:name => 'Joker', :species => 'Dog', :breed => "GoldenDoodle", :image => "http://www.eaglecrosskennel.net/Pics/100_2963_op_800x709.jpg", :age => '1', :user_id => 1)
 stupid = Animal.create(:name => 'Stupid', :species => 'Cat', :breed => "Persian", :image => "http://img4.wikia.nocookie.net/__cb20110301040829/uncyclopedia/images/8/8b/Stupid_cat_3.jpg", :age => '12', :user_id => 4)
 
+
 # tim.recipes << r1
 # tim.recipes << r2
 
