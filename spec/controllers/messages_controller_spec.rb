@@ -8,9 +8,9 @@ require 'spec_helper'
     ApplicationController.any_instance.stub(:message).and_return(message)
   end
 
-  describe 'edit a message' do
+  describe 'create a message' do
 
-    it 'updates message in database' do
+    it ' message in database' do
       get "messages/#{message.id}/edit"
 
       expect(response.status).to eq(200)
