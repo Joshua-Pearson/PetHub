@@ -22,9 +22,11 @@
       <h4> Here's what our users have said about PetHub</h4>
     </div>
     <div id="welcomeComments">
-      <em><strong><%= @message.description %></strong></em><br><br>
-          <img src="<%= @message.user.image %>"/>
-      <strong>--<%= @message.user.name %></strong>
+      <% if @message != nil %>
+        <em><strong><%= @message.description %></strong></em><br><br>
+        <img src="<%= @message.user.image %>"/>
+        <strong>--<%= @message.user.name %></strong>
+      <% end %>
     </div>
   </div>
   <div class="col-xs-4">
