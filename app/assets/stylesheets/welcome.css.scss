@@ -5,7 +5,7 @@
 #mainWelcome {
   text-align: center;
   color: white;
-  padding: 0 0 0 0;
+  padding: 120px 0 0 0;
 }
 
 #mainSecond {
@@ -13,9 +13,12 @@
   color: orange;
 }
 
-.welcomeMenuLeft {
-  padding: 40px 0 0 7px;
-  color: black;
+#welcomeMenuLeft {
+  position: absolute;
+  padding: 100px 0 0 7px;
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  color: yellow;
 }
 
 #othersSaid {

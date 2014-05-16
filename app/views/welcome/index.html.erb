@@ -1,17 +1,4 @@
-<div class="welcomeMenuLeft">
-  <div class="btn-group">
-    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-      Browse Pets Available <span class="caret"></span>
-    </button>
-      <ul class="dropdown-menu" role="menu">
-        <div class="welcomeMenuLeftButtons">
-          <li><a value="all" href="/animals/">View all Pets in the Hub</a></li>
-          <li><%= link_to "Browse Cats Only", animals_path, :class => "btn", params["value"] => "cat" %></li>
-          <li><%= link_to "Browse Dogs Only", animals_path, :class => "btn", params["value"] => "dog" %></li>
-        </div>
-      </ul>
-  </div>
-</div>
+<button><a id="welcomeMenuLeft" href="/animals/"><strong>View all Pets in the Hub!</strong></a></button>
 
 <h1 id="mainWelcome"><strong> Welcome to PetHub </h1></strong>
 <h2 id="mainSecond"> The World's First Social Pet Sharing Site</h2>
