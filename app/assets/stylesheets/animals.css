@@ -36,23 +36,24 @@ h5#fileChosen {
 
 .pet {
   color: orange;
-  padding: 20px 0 0 0;
+  padding: 6em 0 0 0;
   text-align: center;
 }
 
 .pet img {
-  height: 160px;
-  width: 160px;
+  height: 30%;
+  width: 30%;
   display: block;
-  margin: 30px auto;
+  margin: 2em auto;
   box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;
 }
 
 .actions {
   color: white;
-  margin: 0 0 100px 0;
-  padding: 0 0 100px 0;
+  margin: 2em 0 0 0;
+  padding: 2em 0 0 0;
   text-align: center;
+  float: bottom;
 }
 
 #addaNewPet {
