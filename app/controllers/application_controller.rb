@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
-   before_filter do
+   before_action do
      return if !(request.post? or request.patch? or request.put?)
      resource = controller_path.singularize.gsub('/', '_').to_sym
      method = "#{resource}_params"
@@ -15,8 +15,8 @@ class ApplicationController < ActionController::Base
    end
 
   private
-    def current_user
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
-    end
-    helper_method :current_user
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+  helper_method :current_user
 end

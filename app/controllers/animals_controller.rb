@@ -1,5 +1,5 @@
 class AnimalsController < ApplicationController
-  :before_action load_and_authorize_resource 
+  load_and_authorize_resource 
 
   def index
     @animals_today = Animal.today.my_order
