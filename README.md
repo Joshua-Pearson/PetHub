@@ -1,22 +1,20 @@
 PetHub
 ======
 
-
 My first Project!
 
-The #1 Social Pet Sharing Site on the web!
+The #1 Social Pet Sharing Site
 
-The home page allows you to sign in through Facebook omniauth.
+Sign in through Facebook and add a new pet in your profile page.<br><br>
+Then post on the message board about when your pet is available to be shared with others.<br><br>
 
-You don't have to sign in in order to browse or search pets, however you do need to be signed in in order to use many of the other features including: 
+Other users can then comment on your message through your pet on their availability to watch or walk it.<br>
 
-Adding a new pet
-Adding a message board to an existing pet.
+Messages are exchanged between pet owners and potential pet watchers.<br>
 
-The gems used that were most useful:
+
+The technologies used that were most useful:
 
 omniauth-facebook
 cancan
-carrierwave.
-
-Thanks to all those who contributed.
+carrierwave
