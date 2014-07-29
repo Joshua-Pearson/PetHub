@@ -1,41 +1,50 @@
 #mainWelcome {
   text-align: center;
   color: white;
-  padding: 120px 0 0 0;
+  padding: 2em 0 0 0;
+  margin: 2em 0 0 0;
 }
 
 #mainSecond {
   text-align: center;
   color: orange;
+  padding: 1em 0 0 0;
 }
 
 #welcomeMenuLeft {
   position: absolute;
-  padding: 100px 0 0 7px;
+  margin: 3em 0 0 0;
+  padding: 2em 0 0 1em;
   font-family: 'Nobile', Helvetica, Arial, sans-serif;
   font-size: 25px;
   color: yellow;
 }
 
 #othersSaid {
-  padding: 40px 0 0 15px;
+  padding: 4em 0 0 1em;
+  margin: 2em 0 0 0;
   color: white;
+  border: 1px red solid;
 }
 
 #welcomeComments {
-  padding: 20px 0 0 15px;
-  font-size: 13px;
+  padding: 3.5em 0 0 1em;
+  font-size: 1.3em;
   color: white;
+  border: 1px red solid;
 }
 
 #disclaimer {
-  padding: 160px 0 0 0;
   font-size: 10px;
+  margin: 15em 0 0 0;
+  float: bottom;
+  padding: 5em 0 0 0;
   color: white;
 }
 
 .welcomeMenuLeftButtons {
   padding: 0 0 0 5px;
+  border: 1px red solid;
 }
 
 .welcomeMenuLeftButtons li {
@@ -44,5 +53,10 @@
 
 a {
   text-decoration: none;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
 }
 

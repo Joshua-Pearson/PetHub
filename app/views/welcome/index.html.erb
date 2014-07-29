@@ -1,24 +1,30 @@
-<button><a id="welcomeMenuLeft" href="/animals/"><strong>View all Pets in the Hub!</strong></a></button>
+<div class="container">
+  <button><a id="welcomeMenuLeft" href="/animals/"><strong>View all Pets in the Hub!</strong></a></button>
 
-<h1 id="mainWelcome"><strong> Welcome to PetHub </h1></strong>
-<h2 id="mainSecond"> The World's First Social Pet Sharing Site</h2>
+  <h1 id="mainWelcome"><strong> Welcome to PetHub </h1></strong>
+  <h2 id="mainSecond"> The World's First Social Pet Sharing Site</h2>
   
-<div class="row">
-  <div class="col-xs-7">
-    <div id="othersSaid">
-      <h4> Here's what our users have said about PetHub</h4>
-    </div>
-    <div id="welcomeComments">
-      <% if @message != nil %>
-        <em><strong><%= @message.description %></strong></em><br><br>
-        <img src="<%= @message.user.image %>"/>
-        <strong>--<%= @message.user.name %></strong>
-      <% end %>
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="othersSaid">
+        <h3>Here's what our users have said about PetHub</h3>
+      </div>
     </div>
   </div>
-  <div class="col-xs-4">
-    <div id="disclaimer">
-      <p>--By Signing up and using this site you, the user, take all responsibility for using PetHub LLC. PetHub LLC is not responsible for any loss or damages you may experience by using this site.
+  <div class="row">
+    <div class="col-xs-6 col-md-8">
+      <div id="welcomeComments">
+        <% if @message != nil %>
+          <em><strong><%= @message.description %></strong></em><br><br>
+          <img src="<%= @message.user.image %>"/>
+          <strong>--<%= @message.user.name %></strong>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <div id="disclaimer">
+        <p>--By Signing up and using this site you, the user, take all responsibility for using PetHub LLC. PetHub LLC is not responsible for any loss or damages you may experience by using this site.
+      </div>
     </div>
   </div>
 </div>

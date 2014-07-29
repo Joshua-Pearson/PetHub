@@ -14,7 +14,9 @@
  */
 
 body { 
-  background-image: url('http://www.photographybyrichelle.net/wp-content/uploads/2013/07/pet-background1.jpg');
+  height: 100%;
+  width: 100%;
+  background-image: url('pet-background1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-box-shadow:
