@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   
   def show
+    @uploader = Animal.new.image
+    @uploader.success_action_redirect = new_animal_path
     @user = current_user
   end
 

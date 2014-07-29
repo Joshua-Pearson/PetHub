@@ -22,4 +22,8 @@ class Animal < ActiveRecord::Base
   def self.my_order
     order('created_at desc')
   end
+
+  def image_name
+    File.basename(image.path || image.filename) if image
+  end
 end

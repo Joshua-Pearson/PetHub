@@ -1,5 +1,5 @@
 class AnimalsController < ApplicationController
-  load_and_authorize_resource 
+  :before_action load_and_authorize_resource 
 
   def index
     @animals_today = Animal.today.my_order
@@ -13,7 +13,7 @@ class AnimalsController < ApplicationController
   end
 
   def new
-    @animal = Animal.new
+    @animal = Animal.new(key: params[:key])
   end
 
   def create

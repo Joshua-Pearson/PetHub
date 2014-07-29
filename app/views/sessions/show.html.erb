@@ -4,5 +4,12 @@
 
 <div id="profileOptions">
   <li><a href='/users/<%= current_user.id %>/animals/'>View your current pets</a></li>
-  <li><%= link_to "Add a new pet", new_animal_path %></li>
+<!--   <li><%= link_to "Add a new pet", new_animal_path %></li> -->
+
+  <h5 id="fileChosen"> To Add a new pet first upload an image here</h5>
+  
+  <%= direct_upload_form_for @uploader do |f| %>
+    <p><%= f.file_field :image %></p>
+    <p><%= f.submit "Upload Image" %></p>
+  <% end %>
 </div>

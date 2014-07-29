@@ -1,17 +1,10 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
- include CarrierWave::RMagick
-
-  
-  storage :fog
-
+  include CarrierWave::Uploader
+  include CarrierWave::RMagick
   include CarrierWave::MimeTypes
   process :set_content_type
-
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url

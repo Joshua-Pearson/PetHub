@@ -9,6 +9,10 @@
       </ul>
     </div>
   <% end %>
+  <%= f.hidden_field :key %>
+
+  <p>File: <%= @animal.image_name %></p>
+
   <%= f.label :name %>
   <%= f.text_field :name, :autofocus => true, :placeholder => "Enter name of pet here" %><br>
   
@@ -24,8 +28,8 @@
   <%= f.label :description %>
   <%= f.text_area :description, :placeholder => "Short description of your pet and the times available for loaning", :size => "50x10" %><br>
   
-  <h5 id="fileChosen"> Upload an image here
-  <%= f.file_field :image %></h5>
+<!--   <h5 id="fileChosen"> Upload an image here
+  <%#= f.file_field :image %></h5> -->
   
   <%= f.submit  class: "btn btn-primary" %>
 <% end %>
