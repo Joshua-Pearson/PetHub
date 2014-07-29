@@ -3,3 +3,19 @@
 <h2 class="date"><%= Time.now.localtime.strftime("%B %d") %> </h2>
 
 <%= render "group" %>
+
+<% @animals.each do |animal| %>
+  <div class="row">
+    <div class="col-xs-1">
+      <td><a class="animalTextIndex" href='/animals/<%= animal.id %>'><%= animal.name %></a></td>
+    </div>
+    <div class="col-xs-2">
+      <td><a class='animalImageIndex' href='/animals/<%= animal.id %>'><%= image_tag animal.image.url %></a></td>
+    </div>
+    <div class="col-xs-3">
+      <div class="createdAt">
+        <td>Added<br><%= animal.created_at.localtime.strftime("%B %d at %I:%M %p") %></td>
+      </div>
+    </div>
+  </div>
+<% end %>

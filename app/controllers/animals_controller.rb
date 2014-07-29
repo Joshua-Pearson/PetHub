@@ -5,6 +5,7 @@ class AnimalsController < ApplicationController
     @animals_today = Animal.today.my_order
     @animals_yesterday = Animal.yesterday.my_order
     @animals_this_week = Animal.this_week.my_order
+    @animals = Animal.all.order('created_at DESC')
   end
 
   def show
