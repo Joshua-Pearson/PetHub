@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body ng-app="Pethub">
     <%= render 'layouts/header' %>
       <% flash.each do|key,value| %>
         <div class="flash"> <%=value%> </div>

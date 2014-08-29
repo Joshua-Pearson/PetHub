@@ -12,7 +12,6 @@ gem 'cancan'
 #using carrierwave for picture uploading
 gem 'carrierwave'
 gem 'carrierwave_direct'
-gem 'rmagick'
 gem 'fog'
 
 # Use Uglifier as compressor for JavaScript assets
