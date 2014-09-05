@@ -5,7 +5,7 @@
   app.directive("welcome-page", function() {
     return {
       restrict: "E",
-      templateUrl: "partials/welcome-page.html",
+      templateUrl: "assets/javascripts/partials/welcome-page.html",
       controller: function() {
         this.hi = function() {
           return "HI HI HI HI  HI"
