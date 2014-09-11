@@ -2,11 +2,12 @@
 
   var app = angular.module("app-welcome-page", []);
 
-  app.directive("welcome-page", function() {
+  app.directive("welcomePage", function() {
     return {
       restrict: "E",
-      templateUrl: "assets/javascripts/partials/welcome-page.html",
+      templateUrl: "assets/javascripts/angular/partials/welcome-page.html",
       controller: function() {
+        
         this.hi = function() {
           return "HI HI HI HI  HI"
         };
